@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80">
+  <!-- Terrain tracés seulement — fond transparent -->
+  <!-- Pelouse -->
+  <rect x="0" y="0" width="120" height="80" fill="#3a7d44" opacity="0.85"/>
+
+  <!-- Bandes de pelouse alternées -->
+  <rect x="0"   y="0" width="12" height="80" fill="#3a7d44"/>
+  <rect x="12"  y="0" width="12" height="80" fill="#347340"/>
+  <rect x="24"  y="0" width="12" height="80" fill="#3a7d44"/>
+  <rect x="36"  y="0" width="12" height="80" fill="#347340"/>
+  <rect x="48"  y="0" width="12" height="80" fill="#3a7d44"/>
+  <rect x="60"  y="0" width="12" height="80" fill="#347340"/>
+  <rect x="72"  y="0" width="12" height="80" fill="#3a7d44"/>
+  <rect x="84"  y="0" width="12" height="80" fill="#347340"/>
+  <rect x="96"  y="0" width="12" height="80" fill="#3a7d44"/>
+  <rect x="108" y="0" width="12" height="80" fill="#347340"/>
+
+  <!-- Lignes blanches -->
+  <!-- Contour terrain -->
+  <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="white" stroke-width="1"/>
+
+  <!-- Ligne médiane -->
+  <line x1="60" y1="0" x2="60" y2="80" stroke="white" stroke-width="0.8"/>
+
+  <!-- Cercle central -->
+  <circle cx="60" cy="40" r="9.15" fill="none" stroke="white" stroke-width="0.8"/>
+  <circle cx="60" cy="40" r="0.6" fill="white"/>
+
+  <!-- Surface de réparation gauche -->
+  <rect x="0" y="18" width="16.5" height="44" fill="none" stroke="white" stroke-width="0.8"/>
+  <!-- Surface de but gauche -->
+  <rect x="0" y="30.34" width="5.5" height="19.32" fill="none" stroke="white" stroke-width="0.8"/>
+  <!-- Point de penalty gauche -->
+  <circle cx="11" cy="40" r="0.6" fill="white"/>
+
+  <!-- Surface de réparation droite -->
+  <rect x="103.5" y="18" width="16.5" height="44" fill="none" stroke="white" stroke-width="0.8"/>
+  <!-- Surface de but droite -->
+  <rect x="114.5" y="30.34" width="5.5" height="19.32" fill="none" stroke="white" stroke-width="0.8"/>
+  <!-- Point de penalty droit -->
+  <circle cx="109" cy="40" r="0.6" fill="white"/>
+
+  <!-- But gauche -->
+  <rect x="-2.5" y="34.16" width="2.5" height="11.68" fill="#cccccc" stroke="white" stroke-width="0.5"/>
+  <!-- But droit -->
+  <rect x="120" y="34.16" width="2.5" height="11.68" fill="#cccccc" stroke="white" stroke-width="0.5"/>
+
+  <!-- Arcs de coin -->
+  <path d="M 0 2 A 2 2 0 0 1 2 0"   fill="none" stroke="white" stroke-width="0.7"/>
+  <path d="M 118 0 A 2 2 0 0 1 120 2" fill="none" stroke="white" stroke-width="0.7"/>
+  <path d="M 120 78 A 2 2 0 0 1 118 80" fill="none" stroke="white" stroke-width="0.7"/>
+  <path d="M 2 80 A 2 2 0 0 1 0 78"  fill="none" stroke="white" stroke-width="0.7"/>
+</svg>

@@ -1,0 +1,70 @@
+{
+  "projet": "ARGENTUM",
+  "doctrine": "VERBUM",
+  "version": "0.1.0",
+  "statut": "ALPHA",
+  "date_creation": "2026-07-11",
+  "champion": "Operator",
+
+  "session_courante": {
+    "id": null,
+    "date": null,
+    "phase": null
+  },
+
+  "input": {
+    "video_source": null,
+    "format": null,
+    "fps_source": null,
+    "duree_secondes": null
+  },
+
+  "config": {
+    "fps_output": 12,
+    "style": "vectoriel_plat",
+    "boiling_intensity": 0.3,
+    "flip_horizontal": true,
+    "palette": "auto"
+  },
+
+  "artefacts": {
+    "F01_VIGILIS": {
+      "statut": "EN_ATTENTE",
+      "frames_count": null,
+      "chemin": "frames/raw/"
+    },
+    "F02_ANSGAR": {
+      "statut": "EN_ATTENTE",
+      "frames_count": null,
+      "chemin": "frames/styled/"
+    },
+    "F03_AQUILA": {
+      "statut": "EN_ATTENTE",
+      "frames_count": null,
+      "chemin": "frames/final/"
+    },
+    "F04_KRANSE": {
+      "statut": "EN_ATTENTE",
+      "fichier_mp4": null,
+      "chemin": "output/"
+    }
+  },
+
+  "portes": {
+    "PORTE_I": {
+      "statut": "EN_ATTENTE",
+      "validee_par": null,
+      "date": null,
+      "instructions_champion": null
+    },
+    "PORTE_II": {
+      "statut": "EN_ATTENTE",
+      "validee_par": null,
+      "date": null,
+      "instructions_champion": null
+    }
+  },
+
+  "derniere_porte_franchie": null,
+  "mp4_final": null
+}

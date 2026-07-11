@@ -1,0 +1,67 @@
+name: ARGENTUM Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      video_url:
+        description: 'URL ou chemin de la vidéo source'
+        required: true
+      flip_horizontal:
+        description: 'Appliquer effet miroir (true/false)'
+        required: false
+        default: 'true'
+      boiling_intensity:
+        description: 'Intensité du boiling effect (0.0 à 1.0)'
+        required: false
+        default: '0.3'
+
+jobs:
+  argentum:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Python deps
+        run: |
+          pip install pillow numpy opencv-python cairosvg
+
+      - name: Install FFmpeg
+        run: sudo apt-get install -y ffmpeg
+
+      - name: F01 VIGILIS — Ingest
+        run: python F01_VIGILIS/vigilis.py "${{ github.event.inputs.video_url }}"
+
+      - name: F02 ANSGAR — Stylize
+        run: python F02_ANSGAR/ansgar.py
+
+      - name: Upload PORTE I preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: PORTE_I_preview
+          path: frames/styled/preview/
+          retention-days: 1
+
+      # PORTE I : validation manuelle requise avant F03
+      # Relancer le workflow avec le job suivant après validation Champion
+
+      - name: F03 AQUILA — Composite
+        run: python F03_AQUILA/aquila.py
+
+      - name: Upload PORTE II preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: PORTE_II_preview
+          path: frames/final/preview/
+          retention-days: 1
+
+      - name: F04 KRANSE — Encode
+        run: python F04_KRANSE/kranse.py
+
+      - name: Upload MP4 final
+        uses: actions/upload-artifact@v4
+        with:
+          name: ARGENTUM_output
+          path: output/*.mp4
+          retention-days: 7

@@ -24,7 +24,10 @@
     "style": "vectoriel_plat",
     "boiling_intensity": 0.3,
     "flip_horizontal": true,
-    "palette": "auto"
+    "palette": "auto",
+    "output_format": "vertical",
+    "output_width": 1080,
+    "output_height": 1920
   },
 
   "artefacts": {
